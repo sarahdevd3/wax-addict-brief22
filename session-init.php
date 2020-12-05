@@ -1,4 +1,6 @@
+
 <?php
+
 
   // initialisation d'un cookie de session sécurisé
   @ini_set("session.cookie_httponly", 1); // preventing some XSS
