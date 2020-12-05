@@ -1,25 +1,31 @@
 <?php
 
-  @date_default_timezone_set("Europe/Paris"); // fuseau horaire
-  @setlocale(LC_TIME, "fr_FR.utf8","fra"); // jours et mois en français
-  $dateDuJour = strftime("%A %d %B %Y");
+  for ($i=0; $i<=4; $i++) {
+  $produit= $productsArray[$i];
 
-?><!DOCTYPE html>
-<html lang="fr">
+  echo("<pre >Référence du produit:".$produit['id']."<pre>");
+  echo ("<a href='".$produit['image']."'width='400px' height='400px'>");
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>wax-addict — boutique officielle</title>
-  <meta name="description" content="Bienvenue dans la boutique privée “Wax-Addict”. Retrouvez notre toute dernière sélection de tissus africains hauts de gamme.">
-  <link rel="stylesheet" href="assets/style.css">
-</head>
+  echo("<pre >Nom du produit:".$produit['nom']."<pre>");
+  echo ("<a href='".$produit['image']."'width='400px' height='400px'>");
 
-<body class="back-office">
-  <header><h2>wax-addict</h2></header>
-  <main>
-    <h2>Bienvenue dans votre espace privé</h2>
-    <p>Voici les produits disponibles en ce <?php echo $dateDuJour; ?> :</p>
+  echo("<pre >Longueur:".$produit['longueur']."Mètres<pre>");
+  echo ("<a href='".$produit['image']."'width='400px' height='400px'>");
+
+  echo("<pre >Prix:".$produit['prix']."Euros <pre>");
+  echo ("<a href='".$produit['image']."'width='400px' height='400px'>");
+
+  echo ($produit['nom alternatif']);
+  echo'</br>';
+  echo ("<a href='".$produit['image']."'width='400px' height='400px'>");
+  echo ("<img class='img'src='".$produit['image']."'width='400px' height='400px'>");
+  echo ("<a href='".$produit['image']."'width='400px' height='400px'>");
+  echo'</br>';
+  }
+
+?>
+  
+  
   </main>
   <footer><a href="logout.php">déconnexion</a></footer>
 </body>
